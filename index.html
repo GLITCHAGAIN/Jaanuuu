@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sorry, Meri Khushi 🤍</title>
+<style>
+  :root { --rose:#b85c78; --ink:#633b4b; --cream:#fff8f5; --pink:#f8dfe6; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; min-height: 100vh; display: grid; place-items: center; padding: 24px;
+    font-family: Georgia, "Times New Roman", serif; color: var(--ink);
+    background: radial-gradient(circle at top left, #fff 0, transparent 36%),
+                linear-gradient(135deg, #fff8f5, #f9e4ec 55%, #f5e9ff);
+    overflow-x: hidden;
+  }
+  .petal { position: fixed; font-size: clamp(20px, 4vw, 38px); opacity: .45; pointer-events:none; animation: float 7s ease-in-out infinite; }
+  .p1 { top: 8%; left: 7%; } .p2 { top: 17%; right: 8%; animation-delay: -2s; }
+  .p3 { bottom: 10%; left: 9%; animation-delay: -4s; } .p4 { bottom: 12%; right: 7%; animation-delay: -1s; }
+  @keyframes float { 0%,100% { transform: translateY(0) rotate(-8deg); } 50% { transform: translateY(-15px) rotate(8deg); } }
+  .card {
+    position: relative; width: min(680px, 100%); padding: clamp(28px, 6vw, 54px);
+    text-align: center; background: rgba(255,255,255,.82); border: 1px solid rgba(184,92,120,.22);
+    border-radius: 28px; box-shadow: 0 22px 70px rgba(117,65,89,.15); backdrop-filter: blur(8px);
+  }
+  .eyebrow { text-transform: uppercase; letter-spacing: .22em; font: 600 11px/1.5 Arial,sans-serif; color: #b06a82; }
+  h1 { font-size: clamp(36px, 8vw, 62px); line-height: 1.05; margin: 13px 0 12px; color: #a64e70; }
+  .lilies { font-size: clamp(38px, 8vw, 58px); letter-spacing: 7px; margin: 12px 0 18px; }
+  .message { font-size: clamp(17px, 3.5vw, 21px); line-height: 1.85; margin: 0 auto; max-width: 520px; }
+  .highlight { color: #a64e70; font-weight: bold; }
+  .divider { width: 70px; height: 1px; background: #e7b6c6; margin: 26px auto; }
+  .signature { font-size: 23px; font-style: italic; color: #a64e70; margin-top: 22px; }
+  button {
+    margin-top: 26px; border: 0; border-radius: 999px; padding: 14px 25px; cursor: pointer;
+    background: #b85c78; color: white; font: 600 15px Arial,sans-serif;
+    box-shadow: 0 8px 20px rgba(184,92,120,.25); transition: transform .2s, background .2s;
+  }
+  button:hover { transform: translateY(-2px); background: #9f4965; }
+  #extra { display:none; margin: 22px auto 0; max-width: 440px; line-height:1.7; font-size:18px; }
+  footer { margin-top: 25px; font: 12px Arial,sans-serif; color:#a57b8a; letter-spacing:.05em; }
+  @media (prefers-reduced-motion: reduce) { *,*::before,*::after { animation:none !important; transition:none !important; } }
+</style>
+</head>
+<body>
+  <div class="petal p1">🤍🌿</div><div class="petal p2">💮</div>
+  <div class="petal p3">🌸</div><div class="petal p4">🤍💮</div>
+  <main class="card">
+    <div class="eyebrow">a little note for my favourite person</div>
+    <div class="lilies" aria-label="lilies">🤍💮🤍</div>
+    <h1>Sorryyyy, Meriii Jaan!</h1>
+    <p class="message">
+      Khushiii meri deviii, pleaseee mujhe maaf kar do naaa 🥺🤍<br>
+      Aapko late wish karne ke liye <span class="highlight">so so sorryyy</span>…
+      mujhe neend aa gayi thi, aur aapko good night bhi nahi bol paaya.
+      Mera bilkul bhi aapko ignore karne ka intention nahi tha, meri jaan.
+      <br><br>
+      <span class="highlight">I love youuu so muchhh.</span> Aapse bohot pyaar karta hoon,
+      meri deviii. Aap mere liye bohot special ho, aur main kabhi nahi chahta
+      ki meri wajah se aapka dil dukhe. Pleaseee gussa mat hona naaa. 🥹💗
+    </p>
+    <div class="divider"></div>
+    <div class="lilies" aria-label="white lilies">💮🌿💮</div>
+    <p class="message">Ye lilies sirf meri pyaari Khushi ke liye — because you deserve all the softness and love in the world. 🤍</p>
+    <button type="button" onclick="showLove()">Ek baar aur sorry bolun? 💌</button>
+    <p id="extra">SORRYYYY MERIII JAANUUU 😭🤍🌷<br>Aap meri pyaari si deviii ho. I love youuu, always and so so muchhh! 💗</p>
+    <div class="signature">Aapka, jo aapse bohot pyaar karta hai ♡</div>
+    <footer>made with lots of love, just for Khushi</footer>
+  </main>
+<script>
+  function showLove() {
+    const note = document.getElementById('extra');
+    note.style.display = note.style.display === 'block' ? 'none' : 'block';
+  }
+</script>
+</body>
+</html>
